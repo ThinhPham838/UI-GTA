@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "downlevelIteration": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    // "strict": true,
+    "target": "esnext",
+    "module": "commonjs",
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["src/components/*", "src/components/ui/*", "src/components/common/*"],
+      "@utils/*": ["src/utils/*"],
+      "@pages/*": ["src/pages/*"],
+      "@lib/*": ["src/lib/*"],
+      "@slice/*": ["src/app/slice/*"],
+      "@apis/*": ["src/apis/*"],
+      "@models/*": ["src/models/*"],
+    },
+  },
+  "ts-node": {
+    "esm": true      
+  },
+  "include": ["/**/*.ts", "/**/*.js", "src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", "public/firebase-messaging-sw.js"],
+  "exclude": ["**/build/**/*.d.ts", "build", "node_modules", "src/public/**/*", "dist"]
+}

@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+coverage
+.eslintcache
+yarn.lock
+/public/js/map/*.js
+/public/js/map/lib/*.js
+/typings/*.d.ts
+/src/*d.ts

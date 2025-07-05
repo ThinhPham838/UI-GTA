@@ -1,0 +1,63 @@
+{
+  "env": {
+    "browser": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["prettier", "react", "@typescript-eslint", "import"],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "@components/*": ["./src/components", "./src/components/ui", "./src/components/common"],
+        "@utils/*": ["./src/utils"],
+        "@pages/*": ["./src/pages"],
+        "@lib/*": ["./src/lib"],
+        "@slice/*": ["./src/app/slice"],
+        "@apis/*": ["./src/apis"],
+        "@models/*": ["./src/models"],
+      }
+    }
+    },
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "react/jsx-uses-react": "off",
+    "prefer-const": "off",
+    "no-unused-vars": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-duplicate-imports": "error",
+    "spaced-comment": "error",
+    "quotes": ["error", "single"],
+    "prettier/prettier": [
+      "warn",
+      {
+        "arrowParens": "avoid",
+        "semi": true,
+        "trailingComma": "none",
+        "endOfLine": "crlf",
+        "tabWidth": 2,
+        "useTabs": false,
+        "singleQuote": true,
+        "printWidth": 120,
+        "jsxSingleQuote": false
+      }
+    ]
+
+    // "react/react-in-jsx-scope": "off"
+  }
+}
+
