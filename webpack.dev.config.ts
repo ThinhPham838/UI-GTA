@@ -3,7 +3,7 @@ import { HotModuleReplacementPlugin } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+// import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 import Dotenv from 'dotenv-webpack';
@@ -40,7 +40,8 @@ module.exports = env => ({
       '@lib': resolveApp('src/lib/'),
       '@slice': resolveApp('src/app/slice/'),
       '@apis': resolveApp('src/apis/'),
-      '@models': resolveApp('src/models/')
+      '@models': resolveApp('src/models/'),
+      '@app': path.resolve(__dirname, 'src/')
     }
   },
   optimization: {
@@ -99,7 +100,7 @@ module.exports = env => ({
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/09854504-6f38-44fb-b81f-180624/[name].css', // ẩn line optimization này khi run start | nhớ đổi version + ngày build cho thư mục chứa
       chunkFilename: 'css/09854504-6f38-44fb-b81f-180624/[id].css' // ẩn line optimization này khi run start | nhớ đổi version + ngày build cho thư mục chứa

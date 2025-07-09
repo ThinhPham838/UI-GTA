@@ -1,11 +1,11 @@
 {
-  "name": "adsun_smarthome",
+  "name": "gta-ui",
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
   "author": {
-    "name": "HUNG_PHUOC",
-    "email": "nds.tphcm@gmail.com"
+    "name": "QUOC THINH",
+    "email": "phamquocthinh05052001@gmail.com"
   },
   "main": "index.js",
   "scripts": {
@@ -28,11 +28,17 @@
     "@types/react-router-dom": "^5.1.8",
     "@types/styled-components": "5.1.12",
     "antd": "5.18.1",
+    "axios": "^1.10.0",
+    "crypto-js": "^4.2.0",
+    "framer-motion": "^12.23.0",
     "history": "4.10.1",
     "js-cookie": "^3.0.5",
+    "lucide-react": "^0.525.0",
     "mqtt": "4.3.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.60.0",
+    "react-icons": "^5.5.0",
     "react-query": "3.19.2",
     "react-redux": "8.0.2",
     "react-router-dom": "6.14.2",
@@ -42,7 +48,8 @@
     "tailwindcss": "3.4.4",
     "tailwindcss-interaction-variants": "^5.0.0",
     "tailwindcss-nested-groups": "^1.2.4",
-    "twin.macro": "^2.8.1"
+    "twin.macro": "^2.8.1",
+    "vite-tsconfig-paths": "^5.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
@@ -116,7 +123,7 @@
     ]
   },
   "browser": {
-    "[module-name]": false,   
+    "[module-name]": false,
     "electron": false
   },
   "lint-staged": {

@@ -5,7 +5,7 @@ import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+// import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import CopyPlugin from 'copy-webpack-plugin';
 import Dotenv from 'dotenv-webpack';
 import TerserPlugin from 'terser-webpack-plugin';
@@ -93,14 +93,15 @@ module.exports = env => ({
       '@lib': resolveApp('src/lib/'),
       '@slice': resolveApp('src/app/slice/'),
       '@apis': resolveApp('src/apis/'),
-      '@models': resolveApp('src/models/')
+      '@models': resolveApp('src/models/'),
+      '@app': path.resolve(__dirname, 'src/')
     }
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
     new MiniCssExtractPlugin({
       filename: `css/${timeNowBuild}/[name].[contenthash].css`, // ẩn line optimization này khi run start | nhớ đổi version + ngày build cho thư mục chứa
       chunkFilename: `css/${timeNowBuild}/[id].[contenthash].css` // ẩn line optimization này khi run start | nhớ đổi version + ngày build cho thư mục chứa

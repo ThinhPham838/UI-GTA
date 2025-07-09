@@ -1,16 +1,22 @@
-import React from 'react';
+// src/App.tsx
+import LandingPage from '@pages/Home/LandingPage';
+import GuidePage from '@pages/Guide/GuidePage';
+import UserProfile from '@pages/User/UserProfile';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import LoginPage from '@pages/UI-GTA/components/LoginPage';
+import RegisterPage from '@pages/UI-GTA/components/RegisterPage';
 
-const App = () => (
-  <div className="flex items-center justify-center min-h-screen bg-slate-200">
-    <div className="flex-1 align-middle text-grey-darker text-center px-4 py-2 m-2">
-      <div className="text-6xl font-black tracking-tight leading-tight mt-0 mb-0 text-indigo-600">React v18.2 with</div>
-      <div className="text-6xl font-black tracking-tight leading-tight mt-0 mb-0 text-indigo-700">
-        Typescript and Webpack v5
-      </div>
-      <div className="text-6xl font-normal leading-tight mt-0 mb-2 text-indigo-900">Starter Kit</div>
-      <div className="text-3xl leading-normal mt-8 mb-2 text-gray-400">TailwindCSS</div>
-    </div>
-  </div>
-);
+function App() {
+  return (
+    <Routes>
+      {/* <Route path="/" element={<Navigate to="/login" replace />} /> */}
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/huong-dan" element={<GuidePage />} />
+      <Route path="/user" element={<UserProfile />} />
+    </Routes>
+  );
+}
 
 export default App;
